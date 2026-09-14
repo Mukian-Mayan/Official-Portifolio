@@ -15,7 +15,7 @@ export const TECH_LOGOS = [
   { name: "Android",      abbr: "AN", color: "#1F2542" },
 ];
 
-/* One shared proficiency source — used by both the hero tech-badge
+/* One shared proficiency source used by both the hero tech-badge
    detail panel and the "My technologies" skill bars, so the two
    sections can never disagree with each other. */
 export const TECH_DETAILS = {
@@ -84,7 +84,7 @@ export const SERVICES = [
   },
 ];
 
-/* `image` is intentionally blank — drop a file into content/images/
+/* `image` is intentionally blank drop a file into content/images/
    and set the path here (e.g. "content/images/project-1.jpg") to
    fill the card; until then the tone color shows through instead. */
 export const PROJECTS = [
@@ -94,9 +94,9 @@ export const PROJECTS = [
 ];
 
 export const WHY = [
-  { title: "Problem solver", text: "I break big, ambiguous requests into clear technical steps, and I don't stop at the first solution that works — I look for the one that holds up." },
+  { title: "Problem solver", text: "I break big, ambiguous requests into clear technical steps, and I don't stop at the first solution that works I look for the one that holds up." },
   { title: "Continuous learner", text: "Tools change fast. I keep a working list of what I'm exploring next, from new frameworks to backend patterns, so my stack never goes stale." },
-  { title: "User-focused", text: "Every screen and endpoint gets built with the person on the other end in mind — fast, clear, and easy to trust." },
+  { title: "User-focused", text: "Every screen and endpoint gets built with the person on the other end in mind  fast, clear, and easy to trust." },
   { title: "Passionate builder", text: "I like shipping things that work end to end: from database schema to the pixel on screen." },
 ];
 

@@ -319,11 +319,11 @@ p{ margin:0; }
 .service-card{
   position:relative; padding:34px clamp(24px,4vw,44px) 34px clamp(30px,4.6vw,50px); border-radius:24px; overflow:hidden;
   transition:border-radius .5s var(--ease-soft), transform .35s var(--ease);
-  color:#fff; /* Fix 3: explicit — headings/paragraphs no longer inherit the dark heading color */
+  color:#fff; /* Fix 3: explicit headings/paragraphs no longer inherit the dark heading color */
 }
 .service-card:hover{ border-radius:8px; transform:translateX(6px); }
 .service-card::before{
-  /* Fix 3: simple "3D extension" — a beveled left edge, per reference art */
+  /* Fix 3: simple "3D extension" a beveled left edge, per reference art */
   content:""; position:absolute; left:0; top:10px; bottom:10px; width:7px; border-radius:6px;
   background:rgba(255,255,255,.4);
 }
@@ -348,7 +348,7 @@ p{ margin:0; }
 .project-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
 
 /* Fix 4: rebuilt to match the original tab/notch card shape. The body
-   stays empty (or shows `image` from site-data.js) as a reserved slot —
+   stays empty (or shows `image` from site-data.js) as a reserved slot
    default state is the plain color block from the reference art. */
 :root{ --card-tab: #93C7DE; }
 .project-card{
@@ -441,7 +441,7 @@ p{ margin:0; }
 @media (max-width:560px){ .footer-inner{ grid-template-columns:1fr; } }
 
 /* ============================================================
-   RESPONSIVE — HERO / GLOBAL FINE-TUNING
+   RESPONSIVE HERO / GLOBAL FINE-TUNING
 ============================================================ */
 @media (max-width:1100px){
   .hero-inner{ grid-template-columns:1fr; }

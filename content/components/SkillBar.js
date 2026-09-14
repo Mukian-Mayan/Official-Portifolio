@@ -1,6 +1,6 @@
 /* ============================================================
    SkillBar.js
-   One "HTML — 95%"-style progress row. Fills and counts up over
+   One "HTML 95%"-style progress row. Fills and counts up over
    a fixed 2-second span once scrolled into view (Fix 2).
 ============================================================ */
 import { onIntersectOnce, animateNumber } from "../../js/general-functions.js";

@@ -21,7 +21,7 @@ export function renderProjectCard(p) {
     </a>`;
 }
 
-/** Subtle 3D tilt following the cursor — skipped on touch devices. */
+/** Subtle 3D tilt following the cursor  skipped on touch devices. */
 export function initProjectTilt(root, { skip = false } = {}) {
   if (skip) return;
   root.querySelectorAll(".project-card").forEach((card) => {
