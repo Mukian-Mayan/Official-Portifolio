@@ -114,7 +114,7 @@ export const PROJECTS = [
     year: "2024",
     featured: true,
     summary: "A mobile booking flow for appointment-based service businesses.",
-    description: "A booking platform for appointment-based service businesses: clients pick a service, see live availability, and book in a few taps. Built in React Native for a shared iOS/Android codebase, with a MongoDB-backed API handling scheduling logic and conflict prevention.",
+    description: "A booking platform for appointment-based service businesses. Clients pick a service, see live availability, and book in a few taps. Built in React Native for a shared iOS/Android codebase, with a MongoDB-backed API handling scheduling logic and conflict prevention.",
     tech: ["React Native", "MongoDB", "Express"],
     liveUrl: "",
     repoUrl: "",
@@ -402,7 +402,7 @@ export const PROJECTS = [
 ];
 
 export const WHY = [
-  { title: "Problem solver", text: "I break big, ambiguous requests into clear technical steps, and I don't stop at the first solution that works: I look for the one that holds up." },
+  { title: "Problem solver", text: "I break big, ambiguous requests into clear technical steps, and I don't stop at the first solution that works. I look for the one that holds up." },
   { title: "Continuous learner", text: "Tools change fast. I keep a working list of what I'm exploring next, from new frameworks to backend patterns, so my stack never goes stale." },
   { title: "User-focused", text: "Every screen and endpoint gets built with the person on the other end in mind: fast, clear, and easy to trust." },
   { title: "Passionate builder", text: "I like shipping things that work end to end: from database schema to the pixel on screen." },

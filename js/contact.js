@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     const name = form.name.value.trim();
     if (!name) return;
-    feedback.textContent = `Thanks, ${name} — your message is ready to send once this form is connected to an email service (see README).`;
+    feedback.textContent = `Thanks, ${name}! Your message is ready to send once this form is connected to an email service (see README).`;
     form.reset();
   });
 });

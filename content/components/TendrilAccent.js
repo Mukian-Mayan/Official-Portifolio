@@ -1,7 +1,7 @@
 /* TendrilAccent.js */
 const DEFAULTS = {
   count: 2,
-  amp: 16,      
+  amp: 16,      // gentle, a signature detail rather than a focal point
   speed: 40,
   segs: 7,
   width: 5,

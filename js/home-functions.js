@@ -167,7 +167,7 @@ export function initSubscribeForm() {
     e.preventDefault();
     const input = form.querySelector("input");
     if (!input.value) return;
-    feedback.textContent = `Thanks — you're on the list at ${input.value}.`;
+    feedback.textContent = `Thanks! You're on the list at ${input.value}.`;
     form.reset();
     setTimeout(() => (feedback.textContent = ""), 4000);
   });

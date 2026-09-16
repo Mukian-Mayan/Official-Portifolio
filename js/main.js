@@ -1,4 +1,4 @@
-/* main.js — home page entry point (loaded as <script type="module">). */
+/* main.js: home page entry point (loaded as <script type="module">). */
 import { isCoarsePointer } from "./general-functions.js";
 import { initSiteShell } from "./site-shell.js";
 
