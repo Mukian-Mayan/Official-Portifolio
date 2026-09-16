@@ -102,9 +102,9 @@ export const WHY = [
 
 export const SOCIALS = [
   { label: "+256 7XX XXX XXX",      href: "tel:+2567XXXXXXXX", icon: "phone" },
-  { label: "@kezia.fullstack.ug",   href: "#", icon: "instagram" },
-  { label: "@kezia.fullstack.ug",   href: "#", icon: "twitter" },
-  { label: "@kezia.fullstack.ug",   href: "#", icon: "linkedin" },
+  { label: "@Moen.fullstack.ug",   href: "#", icon: "instagram" },
+  { label: "@Moen.fullstack.ug",   href: "#", icon: "twitter" },
+  { label: "@Moen.fullstack.ug",   href: "#", icon: "linkedin" },
   { label: "Kampala, Uganda",       href: "#", icon: "pin" },
 ];
 
