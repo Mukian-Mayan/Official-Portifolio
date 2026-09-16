@@ -12,12 +12,10 @@
 </head>
 <body>
 
-<!-- Page-wide background layer sits at z-index:-1, behind every
-     section, card, and piece of text. Nothing else needs to change
-     to "appear above" it; opaque backgrounds do that automatically. -->
+<!-- Particle background -->
 <canvas id="pageParticles" aria-hidden="true"></canvas>
 
-<!-- ================= PRELOADER ================= -->
+<!-- Preloader -->
 <div class="preloader" id="preloader" aria-hidden="true">
   <div class="preloader-mark">
     <span class="letter">P</span><span class="letter">o</span><span class="letter">r</span><span class="letter">t</span><span class="letter">f</span><span class="letter">o</span><span class="letter">l</span><span class="letter">i</span><span class="letter">o</span>
@@ -25,14 +23,14 @@
   <div class="preloader-bar"><span></span></div>
 </div>
 
-<!-- ================= CUSTOM CURSOR ================= -->
+<!-- Cursor -->
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- ================= SCROLL PROGRESS (bottom) ================= -->
+<!-- Scroll progress -->
 <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressFill"></span></div>
 
-<!-- ================= SECTION DOT NAV ================= -->
+<!-- Section nav -->
 <nav class="section-nav" id="sectionNav" aria-label="Section navigator">
   <button data-target="home" aria-label="Home"><span class="dot-tip">Home</span></button>
   <button data-target="about" aria-label="About"><span class="dot-tip">About</span></button>
@@ -42,7 +40,7 @@
   <button data-target="contact" aria-label="Contact"><span class="dot-tip">Contact</span></button>
 </nav>
 
-<!-- ================= HEADER ================= -->
+<!-- Header -->
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <a href="#home" class="brand" id="brandMark">
@@ -51,8 +49,8 @@
     </a>
     <nav class="main-nav" id="mainNav">
       <a href="#home" class="nav-link is-active" data-nav="home">Home</a>
-      <a href="#projects" class="nav-link" data-nav="projects">Projects</a>
-      <a href="#contact" class="nav-link nav-cta" data-nav="contact">Contact</a>
+      <a href="projects.html" class="nav-link" data-nav="projects">Projects</a>
+      <a href="contact.html" class="nav-link nav-cta" data-nav="contact">Contact</a>
     </nav>
     <div class="mobile-nav-group">
       <span class="nav-current-label" id="navCurrentLabel">Home</span>
@@ -65,8 +63,8 @@
 
 <main>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero" id="home" data-label="Home">
+  <!-- Hero -->
+<section class="hero" id="home" data-label="Home">
     <div class="wrap hero-inner">
       <div class="hero-copy">
         <p class="hero-role" id="heroTyping" aria-live="polite"></p>
@@ -78,7 +76,7 @@
           from beautiful front-end interfaces to powerful back-end systems.
         </p>
         <div class="hero-actions reveal-up" data-delay="2">
-          <a href="#contact" class="btn btn-primary" data-cursor="hover">Let&rsquo;s Work <span class="btn-shape"></span></a>
+          <a href="contact.html" class="btn btn-primary" data-cursor="hover">Let&rsquo;s Work <span class="btn-shape"></span></a>
           <a href="#" class="btn btn-ghost" data-cursor="hover">Download CV</a>
         </div>
         <div class="hero-tech-note reveal-up" data-delay="3">
@@ -92,9 +90,6 @@
 
       <div class="hero-figure">
         <div class="hero-blob" id="heroBlob" aria-hidden="true"></div>
-        <div class="hero-shape-3d" id="heroShape3d" aria-hidden="true">
-         
-        </div>
         <div class="hero-photo-mask" id="heroPhotoMask">
           <img src="content/images/profile.png" alt="" id="heroPhoto">
         </div>
@@ -102,8 +97,8 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section class="about" id="about">
+  <!-- About -->
+<section class="about" id="about">
     <div class="wrap about-inner">
       <div class="about-card reveal-morph">
         <h2 class="about-heading reveal-lines">
@@ -120,32 +115,33 @@
     </div>
   </section>
 
-  <!-- ================= TECHNOLOGIES ================= -->
-  <section class="skills" id="tech">
+  <!-- Technologies -->
+<section class="skills" id="tech">
     <div class="wrap">
       <h2 class="section-heading reveal-lines"><span class="line"><span class="line-inner">My technologies</span></span></h2>
       <div class="skill-grid" id="skillGrid"></div>
     </div>
   </section>
 
-  <!-- ================= SERVICES ================= -->
-  <section class="services" id="services">
+  <!-- Services -->
+<section class="services" id="services">
     <div class="wrap">
       <h2 class="section-heading reveal-lines"><span class="line"><span class="line-inner">My services</span></span></h2>
       <div class="service-list" id="serviceList"></div>
     </div>
   </section>
 
-  <!-- ================= PROJECTS ================= -->
-  <section class="projects" id="projects" data-label="Projects">
+  <!-- Projects -->
+<section class="projects" id="projects" data-label="Projects">
     <div class="wrap">
       <h2 class="section-heading reveal-lines"><span class="line"><span class="line-inner">Featured projects</span></span></h2>
       <div class="project-grid" id="projectGrid"></div>
+      <a href="projects.html" class="view-all-link reveal-up" data-cursor="hover">View all projects →</a>
     </div>
   </section>
 
-  <!-- ================= CTA ================= -->
-  <section class="cta-band" id="ideaCta">
+  <!-- CTA -->
+<section class="cta-band" id="ideaCta">
     <div class="wrap cta-inner">
       <div class="cta-visual" aria-hidden="true">
         <div class="cta-orbit">
@@ -158,13 +154,13 @@
         <h2>Have an idea? Let&rsquo;s build something amazing.</h2>
         <p>Whether you have a project in mind, an interesting opportunity, or simply want
         to connect, I&rsquo;d love to hear from you.</p>
-        <a href="#contact" class="btn btn-primary" data-cursor="hover">Start a conversation</a>
+        <a href="contact.html" class="btn btn-primary" data-cursor="hover">Start a conversation</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= WHY WORK WITH ME ================= -->
-  <section class="why" id="why">
+  <!-- Why work with me -->
+<section class="why" id="why">
     <div class="wrap">
       <h2 class="section-heading reveal-lines"><span class="line"><span class="line-inner">Why work with me</span></span></h2>
       <div class="accordion" id="accordion"></div>
@@ -173,7 +169,7 @@
 
 </main>
 
-<!-- ================= FOOTER ================= -->
+<!-- Footer -->
 <footer class="site-footer" id="contact" data-label="Contact">
   <div class="wrap footer-inner">
     <div class="footer-brand">

@@ -1,12 +1,4 @@
-/* ============================================================
-   general-functions.js
-   Utilities shared by more than one component or page script.
-   Nothing in here is specific to a single component or page —
-   if it's only used in one place, it belongs in that file instead.
-============================================================ */
-
-/* Inline SVG icon set — kept here (not per-component) since several
-   components (ProjectCard, SocialLink, AccordionItem) all draw icons. */
+/* general-functions.js */
 export const ICONS = {
   phone: '<path d="M4 3h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 5a2 2 0 0 1 2-2Z"/>',
   instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/>',
@@ -21,8 +13,6 @@ export function icon(name, extraClass) {
   return `<svg class="icon ${extraClass || ""}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ""}</svg>`;
 }
 
-/** Feature detection helpers — used by several components to skip
- *  mouse-only effects (tilt, parallax, custom cursor) on touch devices. */
 export function isFinePointer() {
   return window.matchMedia("(pointer: fine)").matches;
 }
@@ -30,8 +20,6 @@ export function isCoarsePointer() {
   return window.matchMedia("(pointer: coarse)").matches;
 }
 
-/** Runs `callback` once when `el` scrolls into view, then stops observing.
- *  Used by StatCounter, SkillBar, and the generic scroll-reveal effect. */
 export function onIntersectOnce(el, callback, options = { threshold: 0.3 }) {
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach((entry) => {
@@ -45,9 +33,6 @@ export function onIntersectOnce(el, callback, options = { threshold: 0.3 }) {
   return observer;
 }
 
-/** Animates a number from `from` to `to` over `duration` ms with an
- *  ease-out curve, calling onUpdate(value) every frame. Shared by
- *  StatCounter, SkillBar, and the TechBadge detail panel. */
 export function animateNumber({ from = 0, to, duration = 1400, onUpdate, onDone }) {
   const start = performance.now();
   function step(now) {

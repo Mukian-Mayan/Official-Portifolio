@@ -1,9 +1,4 @@
-/* ============================================================
-   TechBadge.js
-   A single technology badge in the hero marquee. Clicking one
-   expands a shared detail panel with its name, a short blurb,
-   and a proficiency progress bar (Fix 1: click-to-expand detail).
-============================================================ */
+/* TechBadge.js */
 import { animateNumber } from "../../js/general-functions.js";
 import { TECH_DETAILS } from "../site-data.js";
 
@@ -27,8 +22,6 @@ export function renderTechDetailPanel() {
     </div>`;
 }
 
-/** Wires click-to-expand behaviour for every badge inside `trackEl`,
- *  writing into the single detail panel `panelEl`. */
 export function initTechBadges(trackEl, panelEl) {
   const nameEl = panelEl.querySelector("#techDetailName");
   const pctEl = panelEl.querySelector("#techDetailPct");

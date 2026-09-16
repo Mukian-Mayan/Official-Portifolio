@@ -1,15 +1,7 @@
-/* ============================================================
-   TendrilAccent.js
-   A small, quiet corner accent  2 muted tendrils drifting gently.
-   Deliberately restrained: this replaces the hero's decorative
-   cube, not the whole hero background. Same back-to-front rise
-   trick as the fx sandbox (dim/thick at the root, brighter/thinner
-   at the tip), just scaled down and toned way back.
-============================================================ */
-
+/* TendrilAccent.js */
 const DEFAULTS = {
   count: 2,
-  amp: 16,      // gentle  this is a signature detail, not a focal point
+  amp: 16,      
   speed: 40,
   segs: 7,
   width: 5,
@@ -127,7 +119,6 @@ export function initTendrilAccent(canvas, options = {}) {
   }
 
   if (reduceMotion) {
-    // Draw one calm static frame instead of looping, per prefers-reduced-motion.
     frame(0);
   } else {
     requestAnimationFrame(frame);

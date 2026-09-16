@@ -1,11 +1,7 @@
-/* ============================================================
-   SkillBar.js
-   One "HTML 95%"-style progress row. Fills and counts up over
-   a fixed 2-second span once scrolled into view (Fix 2).
-============================================================ */
+/* SkillBar.js */
 import { onIntersectOnce, animateNumber } from "../../js/general-functions.js";
 
-const FILL_DURATION_MS = 2000; // Fix 2: 2 seconds, on scroll into view
+const FILL_DURATION_MS = 2000; // fill duration on scroll into view
 
 export function renderSkillRow(s, i) {
   return `

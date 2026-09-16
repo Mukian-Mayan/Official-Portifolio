@@ -1,7 +1,4 @@
-/* ============================================================
-   SocialLink.js
-   One row in the footer's "Let's connect" list.
-============================================================ */
+/* SocialLink.js */
 import { icon } from "../../js/general-functions.js";
 
 export function renderSocialLink(s) {

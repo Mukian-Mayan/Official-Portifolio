@@ -1,10 +1,6 @@
-/* ============================================================
-   main.js — entry point (loaded as <script type="module">).
-   Renders each component with its data, then wires up behaviour.
-   Keeps the "what" (data), "how it looks" (components), and
-   "how it behaves" (init functions) each in their own files.
-============================================================ */
+/* main.js — home page entry point (loaded as <script type="module">). */
 import { isCoarsePointer } from "./general-functions.js";
+import { initSiteShell } from "./site-shell.js";
 
 import {
   TECH_LOGOS, STATS, SKILLS, SERVICES, PROJECTS, WHY, SOCIALS,
@@ -17,28 +13,18 @@ import { renderServiceCard } from "../content/components/ServiceCard.js";
 import { renderProjectCard, initProjectTilt } from "../content/components/ProjectCard.js";
 import { renderAccordionItem, initAccordion } from "../content/components/AccordionItem.js";
 import { renderSocialLink } from "../content/components/SocialLink.js";
-import { initParticleField } from "../content/components/ParticleField.js";
 
-import {
-  initPreloader, initCustomCursor, initHeaderAndNav, initSectionDotNav,
-  initScrollProgress, initRevealOnScroll, initHeroTyping, initHeroParallax,
-  initSubscribeForm,
-} from "./home-functions.js";
+import { initSectionDotNav, initHeroTyping, initHeroParallax, initSubscribeForm } from "./home-functions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  initSiteShell();
   renderContent();
-  initParticleField(document.getElementById("pageParticles"));
-  initPreloader();
-  initCustomCursor();
-  initHeaderAndNav();
+
   initSectionDotNav();
-  initScrollProgress();
-  initRevealOnScroll();
   initHeroTyping();
   initHeroParallax();
   initSubscribeForm();
 
-  // Component-owned interactivity, wired against the containers main.js just filled.
   initTechBadges(document.getElementById("techTrack"), document.getElementById("techDetail"));
   initStatCounters(document.getElementById("statGrid"));
   initSkillBars(document.getElementById("skillGrid"));
@@ -47,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderContent() {
-  // Tech marquee — logo list is doubled so the CSS scroll-loop is seamless.
   const track = document.getElementById("techTrack");
   track.innerHTML = [...TECH_LOGOS, ...TECH_LOGOS].map(renderTechBadge).join("");
   document.getElementById("techDetailSlot").innerHTML = renderTechDetailPanel();
@@ -55,7 +40,7 @@ function renderContent() {
   document.getElementById("statGrid").innerHTML = STATS.map(renderStat).join("");
   document.getElementById("skillGrid").innerHTML = SKILLS.map(renderSkillRow).join("");
   document.getElementById("serviceList").innerHTML = SERVICES.map(renderServiceCard).join("");
-  document.getElementById("projectGrid").innerHTML = PROJECTS.map(renderProjectCard).join("");
+  document.getElementById("projectGrid").innerHTML = PROJECTS.filter((p) => p.featured).map(renderProjectCard).join("");
   document.getElementById("accordion").innerHTML = WHY.map(renderAccordionItem).join("");
   document.getElementById("footerConnect").insertAdjacentHTML(
     "beforeend",

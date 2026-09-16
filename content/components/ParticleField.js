@@ -1,17 +1,4 @@
-/* ============================================================
-   ParticleField.js
-   A field of small shapes drifting toward the viewer through
-   simulated depth  dim/small far away, bright/large close up,
-   then reset. Used here as the page's persistent background
-   layer: it sits at z-index:-1 behind everything, so every
-   section, card, and piece of text naturally occludes it just
-   by having its own background  no per-component masking needed.
-
-   Independent implementation of the classic perspective-divide
-   starfield technique (own structure/naming), not copied from
-   any reference site.
-============================================================ */
-
+/* ParticleField.js */
 export function initParticleField(canvas, options = {}) {
   const ctx = canvas.getContext("2d");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -20,10 +7,10 @@ export function initParticleField(canvas, options = {}) {
     opt: Object.assign(
       {
         count: 110,
-        speed: 2,          // depth units per second (page-wide default: gentle)
+        speed: 3,          // depth units per second (page-wide default: gentle)
         maxSize: 16,        // px, at the closest point
         minAlpha: 0.12,     // never fully invisible, even at max distance
-        maxAlpha: 0.55,     // kept low  this is ambient texture, not a focal effect
+        maxAlpha: 0.55,     // kept low — this is ambient texture, not a focal effect
         depth: 900,
         focal: 420,
         square: true,

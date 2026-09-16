@@ -1,10 +1,4 @@
-/* ============================================================
-   home-functions.js
-   Functions specific to this one landing page — preloader,
-   custom cursor, header behaviour, scroll progress, hero
-   typing/parallax. None of these are reusable components, so
-   they live here rather than under content/components/.
-============================================================ */
+/* home-functions.js */
 import { isFinePointer, isCoarsePointer } from "./general-functions.js";
 import { HERO_PHRASES } from "../content/site-data.js";
 
@@ -41,9 +35,6 @@ export function initCustomCursor() {
   });
 }
 
-/** Header scroll state, mobile nav toggle, active-link scroll-spy,
- *  and the "current section" label shown next to the hamburger
- *  on narrow screens (Fix 1: keep page context visible on mobile). */
 export function initHeaderAndNav() {
   const header = document.getElementById("siteHeader");
   const toggle = document.getElementById("navToggle");
@@ -150,9 +141,6 @@ export function initHeroTyping() {
   tick();
 }
 
-/** Hero photo + blob drift with the pointer. Fix 1: sizes are now
- *  fluid (see styles.css) so this only ever nudges within bounds
- *  that already fit the viewport, instead of pushing content off-screen. */
 export function initHeroParallax() {
   const figure = document.querySelector(".hero-figure");
   const photo = document.getElementById("heroPhoto");

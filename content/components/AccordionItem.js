@@ -1,7 +1,4 @@
-/* ============================================================
-   AccordionItem.js
-   One expandable "Why work with me" row.
-============================================================ */
+/* AccordionItem.js */
 import { icon } from "../../js/general-functions.js";
 
 export function renderAccordionItem(w, i) {
@@ -17,7 +14,6 @@ export function renderAccordionItem(w, i) {
     </div>`;
 }
 
-/** Single-open accordion behaviour for every .accordion-item in `root`. */
 export function initAccordion(root) {
   const items = root.querySelectorAll(".accordion-item");
   items.forEach((item) => {

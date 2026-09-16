@@ -1,8 +1,4 @@
-/* ============================================================
-   StatCounter.js
-   One "5+ years experience"-style counter. Counts up from 0 to
-   its target once scrolled into view.
-============================================================ */
+/* StatCounter.js */
 import { onIntersectOnce, animateNumber } from "../../js/general-functions.js";
 
 export function renderStat(s, i) {
@@ -13,7 +9,6 @@ export function renderStat(s, i) {
     </div>`;
 }
 
-/** Finds every .stat inside `root` and animates each once visible. */
 export function initStatCounters(root) {
   root.querySelectorAll(".stat").forEach((statEl) => {
     onIntersectOnce(statEl, (target) => {
