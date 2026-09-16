@@ -10,7 +10,7 @@ export function initParticleField(canvas, options = {}) {
         speed: 3,          // depth units per second (page-wide default: gentle)
         maxSize: 16,        // px, at the closest point
         minAlpha: 0.12,     // never fully invisible, even at max distance
-        maxAlpha: 0.55,     // kept low — this is ambient texture, not a focal effect
+        maxAlpha: 0.55,     // kept low this is ambient texture, not a focal effect
         depth: 900,
         focal: 420,
         square: true,
