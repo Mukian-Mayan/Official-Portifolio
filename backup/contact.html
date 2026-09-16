@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Moen</title>
+<meta name="description" content="Get in touch with Moen, a full-stack developer in Kampala, Uganda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,470;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+<!-- Particle background -->
+<canvas id="pageParticles" aria-hidden="true" style="position:fixed;inset:0;z-index:-1;width:100vw;height:100vh;pointer-events:none;"></canvas>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-mark">
+    <span class="letter">P</span><span class="letter">o</span><span class="letter">r</span><span class="letter">t</span><span class="letter">f</span><span class="letter">o</span><span class="letter">l</span><span class="letter">i</span><span class="letter">o</span>
+  </div>
+  <div class="preloader-bar"><span></span></div>
+</div>
+
+<!-- Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressFill"></span></div>
+
+<!-- Header -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand" id="brandMark">
+      <span class="brand-mark"></span>
+      <span class="brand-word">Portfolio</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link" data-nav="home">Home</a>
+      <a href="projects.html" class="nav-link" data-nav="projects">Projects</a>
+      <a href="contact.html" class="nav-link nav-cta is-active" data-nav="contact">Contact</a>
+    </nav>
+    <div class="mobile-nav-group">
+      <span class="nav-current-label" id="navCurrentLabel">Contact</span>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Page hero -->
+  <section class="page-hero wrap">
+    <p class="page-kicker">Get in touch</p>
+    <h1 class="reveal-lines"><span class="line"><span class="line-inner">Let&rsquo;s build something.</span></span></h1>
+    <p class="page-hero-sub reveal-up" data-delay="1">Have a project, a role, or just a question? Send a message and I&rsquo;ll get back to you.</p>
+  </section>
+
+  <!-- Contact form + info -->
+  <section class="contact-layout wrap">
+    <form class="contact-form reveal-up" id="contactForm" novalidate>
+      <div class="form-row">
+        <label>Name
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+      </div>
+      <label>Subject
+        <input type="text" name="subject" required>
+      </label>
+      <label>Message
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary" data-cursor="hover">Send message</button>
+      <p class="form-feedback" id="contactFeedback" role="status" aria-live="polite"></p>
+      <p class="form-note">This form runs client-side only for now. See README for how to connect it to a real email service.</p>
+    </form>
+
+    <aside class="contact-side reveal-up" data-delay="1">
+      <div class="contact-side-block">
+        <h3>Direct</h3>
+        <a href="mailto:hello@moen.dev" class="contact-direct-link" data-cursor="hover">hello@moen.dev</a>
+      </div>
+      <div class="contact-side-block">
+        <h3>Elsewhere</h3>
+        <div id="contactSocials"></div>
+      </div>
+      <div class="contact-side-block">
+        <h3>Based in</h3>
+        <p>Kampala, Uganda, working with clients everywhere.</p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer footer-minimal" id="contact-footer">
+  <div class="wrap footer-bottom" style="border-top:none;">
+    <p>&copy; 2026 Moen. All rights reserved.</p>
+  </div>
+</footer>
+
+<script type="module" src="js/contact.js"></script>
+</body>
+</html>
