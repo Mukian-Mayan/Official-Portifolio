@@ -7,7 +7,7 @@ export function initParticleField(canvas, options = {}) {
     opt: Object.assign(
       {
         count: 110,
-        speed: 8,          // depth units per second (page-wide default: gentle)
+        speed: 3,          // depth units per second (page-wide default: gentle)
         maxSize: 16,        // px, at the closest point
         minAlpha: 0.12,     // never fully invisible, even at max distance
         maxAlpha: 0.55,     // kept low, ambient texture rather than a focal effect

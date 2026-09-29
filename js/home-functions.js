@@ -144,7 +144,6 @@ export function initHeroTyping() {
 export function initHeroParallax() {
   const figure = document.querySelector(".hero-figure");
   const photo = document.getElementById("heroPhoto");
-  const blob = document.getElementById("heroBlob");
   if (!figure || isCoarsePointer()) return;
 
   figure.addEventListener("mousemove", (e) => {
@@ -152,11 +151,9 @@ export function initHeroParallax() {
     const relX = (e.clientX - rect.left) / rect.width - 0.5;
     const relY = (e.clientY - rect.top) / rect.height - 0.5;
     photo.style.transform = `scale(1.05) translate(${relX * -14}px, ${relY * -14}px)`;
-    blob.style.transform = `translate(-50%, -50%) translate(${relX * 22}px, ${relY * 22}px)`;
   });
   figure.addEventListener("mouseleave", () => {
     photo.style.transform = "scale(1.02) translate(0,0)";
-    blob.style.transform = "translate(-50%, -50%)";
   });
 }
 

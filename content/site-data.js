@@ -421,4 +421,5 @@ export const HERO_PHRASES = [
   "Front-end craftsman",
   "Back-end engineer",
   "Mobile app builder",
+   "A for real Hummite",
 ];
